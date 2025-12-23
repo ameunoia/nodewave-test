@@ -1,4 +1,7 @@
-import { INTERNAL_SERVER_ERROR_SERVICE_RESPONSE } from "$entities/Service";
+import {
+  BadRequestWithMessage,
+  INTERNAL_SERVER_ERROR_SERVICE_RESPONSE,
+} from "$entities/Service";
 import Logger from "$pkg/logger";
 import { prisma } from "$utils/prisma.utils";
 import { ExcelJob, Status } from "@prisma/client";
@@ -78,5 +81,34 @@ export async function runExcelJob(job: ExcelJob) {
         lockedAt: null,
       },
     });
+  }
+}
+
+export async function getExcelJobStatus(jobId: string) {
+  try {
+    const job = await prisma.excelJob.findUnique({
+      where: {
+        id: jobId,
+      },
+      select: {
+        id: true,
+        status: true,
+        createdAt: true,
+        updatedAt: true,
+        attempt: true,
+        maxAttempts: true,
+      },
+    });
+    if (!job) {
+      return BadRequestWithMessage("Job not found");
+    }
+
+    return {
+      status: true,
+      data: job,
+    };
+  } catch (error) {
+    Logger.error(`ExcelService.get : ${error}`);
+    return INTERNAL_SERVER_ERROR_SERVICE_RESPONSE;
   }
 }
