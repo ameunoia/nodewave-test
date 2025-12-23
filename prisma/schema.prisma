@@ -35,7 +35,7 @@ model Customer {
 
 model ExcelJob {
   id          String    @id @default(uuid())
-  fileUrl     String
+  fileKey     String
   status      Status    @default(PENDING)
   attempt     Int       @default(0)
   maxAttempts Int       @default(3)

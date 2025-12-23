@@ -5,10 +5,10 @@ export const upload = multer({
   limits: {
     fileSize: 5 * 1024 * 1024,
   },
-  fileFilter(req, file, cb) {
+  fileFilter(req, file, callback) {
     if (!file.originalname.endsWith(".xlsx")) {
-      return cb(new Error("Only .xlsx files allowed"));
+      return callback(new Error("Only .xlsx files allowed"));
     }
-    cb(null, true);
+    callback(null, true);
   },
 });

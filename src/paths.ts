@@ -11,7 +11,8 @@ addAliases({
   $middlewares: `${__dirname}/middlewares`,
   $seeders: `${__dirname}/seeders`,
   $config: `${__dirname}/config`,
-  $pkg : `${__dirname}/pkg`,
-  $server : `${__dirname}/server`,
-  $app : `${__dirname}/app`,
+  $pkg: `${__dirname}/pkg`,
+  $server: `${__dirname}/server`,
+  $app: `${__dirname}/app`,
+  $workers: `${__dirname}/workers`,
 });

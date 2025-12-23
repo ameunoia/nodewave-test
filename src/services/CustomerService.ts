@@ -1,22 +1,14 @@
 import { INTERNAL_SERVER_ERROR_SERVICE_RESPONSE } from "$entities/Service";
 import Logger from "$pkg/logger";
-import { uploadExcel } from "./UploadService";
+import { uploadAndProcessExcel } from "./ExcelService";
 
 export async function importCustomer(excelFile: Express.Multer.File) {
   try {
-    let excelUrl: string | undefined;
+    const processExcel = await uploadAndProcessExcel(excelFile);
 
-    const uploadResult = await uploadExcel(excelFile);
-    excelUrl = uploadResult.url;
-
-    return {
-      status: true,
-      data: {
-        url: excelUrl,
-      },
-    };
+    return processExcel;
   } catch (error) {
-    Logger.error(`AuthService.post : ${error}`);
+    Logger.error(`CustomerService.post : ${error}`);
     return INTERNAL_SERVER_ERROR_SERVICE_RESPONSE;
   }
 }
