@@ -36,7 +36,7 @@ export async function registerUser(
       data: user,
     };
   } catch (error) {
-    Logger.error(`ExampleService.get : ${error}`);
+    Logger.error(`AuthService.post : ${error}`);
     return INTERNAL_SERVER_ERROR_SERVICE_RESPONSE;
   }
 }
@@ -71,7 +71,7 @@ export async function loginUser(email: string, password: string) {
       },
     };
   } catch (error) {
-    Logger.error(`ExampleService.get : ${error}`);
+    Logger.error(`AuthService.post : ${error}`);
     return INTERNAL_SERVER_ERROR_SERVICE_RESPONSE;
   }
 }
