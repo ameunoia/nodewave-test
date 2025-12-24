@@ -11,5 +11,6 @@ CustomerRoutes.post(
   upload.single("file"),
   CustomerController.uploadCustomerData
 );
+CustomerRoutes.get("/", CustomerController.getCustomers);
 
 export default CustomerRoutes;
