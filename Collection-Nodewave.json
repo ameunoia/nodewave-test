@@ -1,0 +1,508 @@
+{
+	"info": {
+		"_postman_id": "4621b3fc-b413-445b-a7e1-5ca67aa3413b",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16528861"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"arga@gmail.com\",\r\n    \"password\": \"123123\",\r\n    \"name\": \"Arga Satya\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/auth/register",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Register",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"arga@gmail.com\",\r\n    \"password\": \"123123\",\r\n    \"name\": \"Arga Satya\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/auth/register",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "308"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"134-WMYkpn8oLd635jA/dJ5NaHUgLhA\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 24 Dec 2025 06:06:47 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"content\": {\n        \"id\": \"4381e159-677d-42ee-b307-d2cd21c85a27\",\n        \"email\": \"arga@gmail.com\",\n        \"name\": \"Arga Satya\",\n        \"password\": \"$2b$10$UM7E.h/pSMW653eqlTPAq.Rgc/b2JzbJ13KgxUQKyglXr0HhyLV7C\",\n        \"createdAt\": \"2025-12-24T06:06:47.502Z\",\n        \"updatedAt\": \"2025-12-24T06:06:47.502Z\"\n    },\n    \"message\": \"User registered successfully!\",\n    \"errors\": []\n}"
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"arga@gmail.com\",\r\n    \"password\": \"123123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/auth/login",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"arga@gmail.com\",\r\n    \"password\": \"123123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/auth/login",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "367"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"16f-U9IUy6ViAVHFw6vOf56O/IFV/gA\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 24 Dec 2025 06:07:05 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"content\": {\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI0MzgxZTE1OS02NzdkLTQyZWUtYjMwNy1kMmNkMjFjODVhMjciLCJpYXQiOjE3NjY1NTY0MjUsImV4cCI6MTc2NjY0MjgyNX0.yxby7GnrNKxl29l7fe5gRBHPCz1NUI7HYzpYlgK_cQE\",\n        \"user\": {\n            \"id\": \"4381e159-677d-42ee-b307-d2cd21c85a27\",\n            \"email\": \"arga@gmail.com\",\n            \"name\": \"Arga Satya\"\n        }\n    },\n    \"message\": \"User logged in successfully!\",\n    \"errors\": []\n}"
+				}
+			]
+		},
+		{
+			"name": "Import Customer",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDljOWRkMy04MjMwLTRkZTEtYTc0Ni05NTMwYmUyZGFiNGEiLCJpYXQiOjE3NjY1MDA4NTUsImV4cCI6MTc2NjU4NzI1NX0.Yb-1vEBf_N0xTLZe2L_DZ6nxKo0YAQEuvd2jP_RLPhE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/home/ameunoia/Downloads/customers_10000.xlsx"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseURL}}/customer/import",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"customer",
+						"import"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Import Customer",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/home/ameunoia/Downloads/customers_10000.xlsx"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseURL}}/customer/import",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"customer",
+								"import"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "121"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"79-hTnHrisdSZJb/OiiwSU0wHJGn5k\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 24 Dec 2025 06:10:06 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"content\": {\n        \"jobId\": \"41b240bf-f9b7-4644-b107-401c3869a044\"\n    },\n    \"message\": \"Customer data imported successfully!\",\n    \"errors\": []\n}"
+				}
+			]
+		},
+		{
+			"name": "Check Status import",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDljOWRkMy04MjMwLTRkZTEtYTc0Ni05NTMwYmUyZGFiNGEiLCJpYXQiOjE3NjY1MDA4NTUsImV4cCI6MTc2NjU4NzI1NX0.Yb-1vEBf_N0xTLZe2L_DZ6nxKo0YAQEuvd2jP_RLPhE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/excel-job/status/41b240bf-f9b7-4644-b107-401c3869a044",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"excel-job",
+						"status",
+						"41b240bf-f9b7-4644-b107-401c3869a044"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Check Status import",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/excel-job/status/41b240bf-f9b7-4644-b107-401c3869a044",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"excel-job",
+								"status",
+								"41b240bf-f9b7-4644-b107-401c3869a044"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "243"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"f3-XXJB/OkAIdk7h7AwFBrCWSemOx0\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 24 Dec 2025 06:10:46 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"content\": {\n        \"id\": \"41b240bf-f9b7-4644-b107-401c3869a044\",\n        \"status\": \"COMPLETED\",\n        \"createdAt\": \"2025-12-24T06:10:06.291Z\",\n        \"updatedAt\": \"2025-12-24T06:10:10.471Z\",\n        \"attempt\": 1,\n        \"maxAttempts\": 3\n    },\n    \"message\": \"get excel job status successfully!\",\n    \"errors\": []\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Customers",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI0MzgxZTE1OS02NzdkLTQyZWUtYjMwNy1kMmNkMjFjODVhMjciLCJpYXQiOjE3NjY1NTY0MjUsImV4cCI6MTc2NjY0MjgyNX0.yxby7GnrNKxl29l7fe5gRBHPCz1NUI7HYzpYlgK_cQE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/customer?filters={\"name\":[\"Sean Kline\", \"Hannah Ward\"]}&page=",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"customer"
+					],
+					"query": [
+						{
+							"key": "filters",
+							"value": "{\"name\":[\"Sean Kline\", \"Hannah Ward\"]}"
+						},
+						{
+							"key": "searchFilters",
+							"value": "{\"email\":\"gmail.com\"}",
+							"disabled": true
+						},
+						{
+							"key": "page",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Customers",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/customer?filters={\"name\":[\"Sean Kline\", \"Hannah Ward\"]}&page=",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"customer"
+							],
+							"query": [
+								{
+									"key": "filters",
+									"value": "{\"name\":[\"Sean Kline\", \"Hannah Ward\"]}"
+								},
+								{
+									"key": "searchFilters",
+									"value": "{\"email\":\"gmail.com\"}",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": ""
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "576"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"240-uYBpm1xLm9is10ehOxmn3dP/Fhw\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 24 Dec 2025 06:12:52 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"content\": {\n        \"data\": [\n            {\n                \"id\": \"2e47914e-a068-4def-8f43-6aa2f003912b\",\n                \"name\": \"Sean Kline\",\n                \"email\": \"mcmahonashley@yahoo.com\",\n                \"phone\": \"266.495.8654x251\",\n                \"createdAt\": \"2025-12-24T06:10:09.248Z\",\n                \"updatedAt\": \"2025-12-24T06:10:09.248Z\"\n            },\n            {\n                \"id\": \"9e4bb989-f514-4313-a6e6-3962e138b3af\",\n                \"name\": \"Hannah Ward\",\n                \"email\": \"hurleyanthony@smith.com\",\n                \"phone\": \"889.492.2958x84571\",\n                \"createdAt\": \"2025-12-24T06:10:09.248Z\",\n                \"updatedAt\": \"2025-12-24T06:10:09.248Z\"\n            }\n        ],\n        \"meta\": {\n            \"page\": 1,\n            \"rows\": 10,\n            \"total\": 2,\n            \"totalPages\": 1,\n            \"hasNext\": false,\n            \"hasPrev\": false\n        }\n    },\n    \"message\": \"Customers fetched successfully!\",\n    \"errors\": []\n}"
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL",
+			"value": "",
+			"type": "default"
+		}
+	]
+}
