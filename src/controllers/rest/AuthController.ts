@@ -5,15 +5,20 @@ import {
   response_bad_request,
   response_success,
 } from "$utils/response.utils";
+import { UserLoginDTO, UserRegisterDTO } from "$entities/Auth";
 
 export async function registerUser(req: Request, res: Response) {
-  const { email, password, name } = req.body;
+  const body = req.body as UserRegisterDTO;
 
-  if (!email || !password) {
+  if (!body.email || !body.password) {
     return response_bad_request(res, "Email and password are required");
   }
 
-  const serviceResponse = await AuthService.registerUser(email, password, name);
+  const serviceResponse = await AuthService.registerUser(
+    body.email,
+    body.password,
+    body.name
+  );
 
   if (!serviceResponse.status) {
     return handleServiceErrorWithResponse(res, serviceResponse);
@@ -27,13 +32,16 @@ export async function registerUser(req: Request, res: Response) {
 }
 
 export async function loginUser(req: Request, res: Response) {
-  const { email, password } = req.body;
+  const body = req.body as UserLoginDTO;
 
-  if (!email || !password) {
+  if (!body.email || !body.password) {
     return response_bad_request(res, "Email and password are required");
   }
 
-  const serviceResponse = await AuthService.loginUser(email, password);
+  const serviceResponse = await AuthService.loginUser(
+    body.email,
+    body.password
+  );
 
   if (!serviceResponse.status) {
     return handleServiceErrorWithResponse(res, serviceResponse);
